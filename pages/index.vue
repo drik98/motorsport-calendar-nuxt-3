@@ -1,8 +1,6 @@
 <template>
   <div class="hello-scss">
-    <div class="hello-scss__element text-2xl">
-      Hello World, {{ value }}!
-    </div>
+    <div class="hello-scss__element text-2xl">Hello World, {{ value }}!</div>
   </div>
 </template>
 
