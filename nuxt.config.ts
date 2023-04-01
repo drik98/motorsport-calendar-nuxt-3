@@ -15,7 +15,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/html-validator',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/robots',
-    '@nuxt/image-edge',
+    '@nuxtjs/robots'
   ],
 })
