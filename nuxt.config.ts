@@ -18,4 +18,4 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxt/image-edge',
   ],
-});
+})
