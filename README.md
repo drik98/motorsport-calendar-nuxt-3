@@ -10,6 +10,14 @@ Make sure to install the dependencies:
 pnpm install --shamefully-hoist
 ```
 
+Also create a `.env` file in the root of the project containing the following environment variables:
+
+```dotenv
+NUXT_GOOGLE_API_KEY=
+NUXT_SPREADSHEET_ID=
+NUXT_SPREADSHEET_NAME=
+```
+
 ## Development Server
 
 Start the development server on <http://localhost:3000>

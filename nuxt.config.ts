@@ -17,4 +17,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/robots'
   ],
+  runtimeConfig: {
+    googleApiKey: '',
+    spreadsheetId: '',
+    spreadsheetName: '',
+  }
 })

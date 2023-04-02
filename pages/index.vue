@@ -1,11 +1,14 @@
 <template>
   <div class="hello-scss">
     <div class="hello-scss__element text-2xl">Hello World, {{ value }}!</div>
+    {{ data }}
   </div>
 </template>
 
 <script setup lang="ts">
 import { Ref } from 'vue'
+
+const { data } = useFetch('/api/google-sheets')
 
 // Typescript ESLint check;
 type Value = string
