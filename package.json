@@ -16,6 +16,7 @@
     "lintfix:prettier": "prettier --write --list-different ."
   },
   "devDependencies": {
+    "@googleapis/sheets": "^4.0.2",
     "@nuxtjs/html-validator": "^1.2.4",
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/stylelint-module": "^5.0.1",
@@ -23,6 +24,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "@vue/eslint-config-typescript": "^11.0.2",
+    "any-date-parser": "^1.5.4",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
