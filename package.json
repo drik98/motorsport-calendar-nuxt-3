@@ -20,7 +20,6 @@
     "@nuxtjs/html-validator": "^1.2.4",
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/stylelint-module": "^5.0.1",
-    "@nuxtjs/tailwindcss": "^6.6.5",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "@vue/eslint-config-typescript": "^11.0.2",

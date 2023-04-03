@@ -1,10 +1,10 @@
 <template>
-  <div class="hello-scss p-2">
-    <div class="hello-scss__element text-2xl">Hello World, {{ value }}!</div>
+  <div class="hello-scss">
+    <div class="hello-scss__element">Hello World, {{ value }}!</div>
     <ul class="list-disc">
-      <li v-for="race in data" :key="race.name" class="my-2">
+      <li v-for="race in data" :key="race.name">
         <strong>{{ race.name }}</strong>
-        <ul class="list-disc list-inside">
+        <ul>
           <li v-for="[ key, entry] in Object.entries( race )" :key="key">
             {{ key }}: {{ entry }}
           </li>
@@ -26,10 +26,4 @@ const value: Ref<Value> = ref('Hello Nuxt3')
 </script>
 
 <style lang="scss" scoped>
-.hello-scss {
-  &__element {
-    @apply hover:text-green-400;
-    @apply hover:cursor-pointer;
-  }
-}
 </style>
