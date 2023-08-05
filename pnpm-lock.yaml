@@ -1,12 +1,22 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@mdi/font':
+    specifier: ^7.2.96
+    version: 7.2.96
   moment:
     specifier: 2.29.1
     version: 2.29.1
   moment-timezone:
     specifier: 0.5.32
     version: 0.5.32
+  vite-plugin-vuetify:
+    specifier: ^1.0.2
+    version: 1.0.2(vite@4.2.1)(vue@3.2.47)(vuetify@3.1.12)
+  vuetify:
+    specifier: ^3.1.12
+    version: 3.1.12(vite-plugin-vuetify@1.0.2)(vue@3.2.47)
+
 devDependencies:
   '@googleapis/sheets':
     specifier: ^4.0.2
