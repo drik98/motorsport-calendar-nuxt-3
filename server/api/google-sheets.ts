@@ -93,27 +93,6 @@ function mapToRace(
           )
           .toDate()
 
-   console.log({
-      value,
-      estimatedDuration,
-      defaultRaceDuration: runtimeConfig.defaultRaceDuration,
-      startDate,
-      momentStart: moment(startDate),
-      addedMoment:  moment(startDate)
-      .add(
-        moment.duration(
-          estimatedDuration ?? runtimeConfig.defaultRaceDuration
-        )
-      ),
-      duration:  estimatedDuration ?? runtimeConfig.defaultRaceDuration,
-      momentDuration:  moment.duration(
-         estimatedDuration ?? runtimeConfig.defaultRaceDuration
-       ),
-       p1mDuration: moment.duration('P1M'),
-       p2hDuration: moment.duration('PT2H'),
-      endDate
-   })
-
   return {
     name,
     startDate,
