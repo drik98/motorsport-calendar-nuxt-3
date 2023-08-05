@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { Ref } from 'vue'
-import { Race } from '~/server/api/google-sheets'
+import { Race } from '~/types/races'
 
 const { data } = useFetch<Race[]>('/api/google-sheets')
 

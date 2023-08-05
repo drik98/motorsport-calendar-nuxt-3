@@ -1,6 +1,8 @@
-# Nuxt3 Template
+# Motorsport Calendar 2.0
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This web application is the successor of [motorsport-calendar-vue](https://github.com/drik98/motorsport-calendar-vue).
+Even though Gridsome was a practical tool at the time of creation it failed to migrate to vue 3 as well as it
+has poor support for typescript. Thats why this project uses nuxt3.
 
 ## Setup
 
@@ -10,13 +12,23 @@ Make sure to install the dependencies:
 pnpm install --shamefully-hoist
 ```
 
-Also create a `.env` file in the root of the project containing the following environment variables:
+Also create a `.env` file in the root of the project containing at least the required environment variables:
 
-```dotenv
-NUXT_GOOGLE_API_KEY=
-NUXT_SPREADSHEET_ID=
-NUXT_SPREADSHEET_NAME=
-```
+| Environment Variable       | Description                                                                                                                                              | Required | Default Value      |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|--------------------|
+| NUXT_GOOGLE_API_KEY        | An access token which needs to be generated and has at least read permissions on the google sheet.                                                       |     ✅    | ``                 |
+| NUXT_SPREADSHEET_ID=       | The id of the google sheet from which the data is to be loaded                                                                                           |     ✅    | ``                 |
+| NUXT_SPREADSHEET_NAME      | The name of the google sheet from which the data is to be loaded                                                                                         |     ✅    | ``                 |
+| NUXT_COLUMN_NAME           | Needed to map the column containing the name of the race, e.g. `Le Mans 24h`                                                                             |     ❌    | `Rennen`           |
+| NUXT_COLUMN_HOST           | Needed to map the column containing the information about who hosts the race                                                                             |     ❌    | `Übertragung`      |
+| NUXT_COLUMN_PLACE          | Needed to map the column containing the place of the race, e.g. `Silverstone`                                                                            |     ❌    | `Ort`              |
+| NUXT_COLUMN_TYPE           | Needed to map the column containing the type of the race, e.g. `24h`                                                                                     |     ❌    | `Art`              |
+| NUXT_COLUMN_DATE           | Needed to map the column containing the date of the race, e.g. `30.06.2023` as well as `30.06.2023-01.07.2023` to give a range of dates                  |     ❌    | `Datum`            |
+| NUXT_COLUMN_TIME           | Needed to map the column containing the start time of the race                                                                                           |     ❌    | `Zeit`             |
+| NUXT_COLUMN_DATE_FORMAT    | Can be used to customize the format of the date                                                                                                          |     ❌    | `DD.MM.YYYY mm:ss` |
+| NUXT_DEFAULT_RACE_DURATION | Can be used to customize the default duration of the race if it is not a special race like the 24h of Nürburgring. Accepts a duration in ISO 8601 format |     ❌    | `H2` (2 hours)     |
+
+As you probably noticed each variable has to be prefixed with `NUXT_`. See [nuxt docs](https://nuxt.com/docs/api/composables/use-runtime-config).
 
 ## Development Server
 
@@ -39,5 +51,3 @@ Locally preview production build:
 ```bash
 pnpm run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

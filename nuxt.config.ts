@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Nuxt3 Template',
+      title: 'Motorsport Calendar',
       htmlAttrs: {
-        lang: 'en',
+        lang: 'de',
       },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -21,4 +21,12 @@ export default defineNuxtConfig({
     spreadsheetId: '',
     spreadsheetName: '',
   }
+  vite: {
+		ssr: {
+			noExternal: ['vuetify'],
+		},
+		define: {
+			'process.env.DEBUG': false,
+		},
+	},
 })
