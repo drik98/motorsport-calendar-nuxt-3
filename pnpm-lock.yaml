@@ -39,9 +39,6 @@ devDependencies:
   '@vue/eslint-config-typescript':
     specifier: ^11.0.2
     version: 11.0.2(eslint-plugin-vue@9.10.0)(eslint@8.37.0)(typescript@4.9.5)
-  any-date-parser:
-    specifier: ^1.5.4
-    version: 1.5.4
   eslint:
     specifier: ^8.37.0
     version: 8.37.0
@@ -1831,10 +1828,6 @@ packages:
   /ansi-styles@6.2.1:
     resolution: {integrity: sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==}
     engines: {node: '>=12'}
-    dev: true
-
-  /any-date-parser@1.5.4:
-    resolution: {integrity: sha512-S4gl9UmXNk9XXSQxp5w5harUD6aM0fepyL3dZM/B3znX57sWf792hS2UvvCFIHECfpsqfKbQ+cqWBky4AKyRIg==}
     dev: true
 
   /anymatch@3.1.3:
