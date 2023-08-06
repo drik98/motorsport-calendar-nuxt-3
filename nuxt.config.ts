@@ -1,4 +1,4 @@
-import vuetify from 'vite-plugin-vuetify';
+import vuetify from 'vite-plugin-vuetify'
 import { createResolver } from '@nuxt/kit'
 
 const { resolve } = createResolver(import.meta.url)
@@ -6,8 +6,8 @@ const { resolve } = createResolver(import.meta.url)
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   build: {
-		transpile: ['vuetify'],
-	},
+    transpile: ['vuetify'],
+  },
   css: [
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
           styles: { configFile: resolve('./settings.scss') },
         })
       )
-    }
+    },
   },
   app: {
     head: {
@@ -29,10 +29,10 @@ export default defineNuxtConfig({
       },
       link: [
         {
-					rel: 'stylesheet',
-					href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
-				},
-				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
+        },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -40,10 +40,7 @@ export default defineNuxtConfig({
       noscript: [{ children: 'Javascript is required' }],
     },
   },
-  modules: [
-    '@nuxtjs/html-validator',
-    '@nuxtjs/robots'
-  ],
+  modules: ['@nuxtjs/html-validator', '@nuxtjs/robots'],
   runtimeConfig: {
     googleApiKey: '',
     spreadsheetId: '',
@@ -58,11 +55,11 @@ export default defineNuxtConfig({
     defaultRaceDuration: 'PT2H',
   },
   vite: {
-		ssr: {
-			noExternal: ['vuetify'],
-		},
-		define: {
-			'process.env.DEBUG': false,
-		},
-	},
+    ssr: {
+      noExternal: ['vuetify'],
+    },
+    define: {
+      'process.env.DEBUG': false,
+    },
+  },
 })
