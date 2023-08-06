@@ -10,7 +10,7 @@ export default defineEventHandler(async () => {
     `https://sheets.googleapis.com/v4/spreadsheets/${runtimeConfig.spreadsheetId}/values/${runtimeConfig.spreadsheetName}?key=${runtimeConfig.googleApiKey}`
   )
   return toObjectArray(valueRange)
-    .map((row) => mapToRace(row, runtimeConfig))
+    .map((row, rowIndex) => mapToRace(row, rowIndex, runtimeConfig))
     .sort(raceComparator)
 })
 
@@ -51,6 +51,7 @@ function toObjectArray(
  */
 function mapToRace(
   value: GoogleSpreadsheetRow,
+  index: number,
   runtimeConfig: RuntimeConfig
 ): Race {
   const name = String(value[runtimeConfig.columnName])
@@ -94,6 +95,7 @@ function mapToRace(
           .toDate()
 
   return {
+    id: index,
     name,
     startDate,
     endDate,
