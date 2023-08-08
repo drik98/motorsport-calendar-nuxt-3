@@ -51,3 +51,22 @@ Locally preview production build:
 ```bash
 pnpm run preview
 ```
+
+## Storybook
+
+The custom components are documented and can be developed in isolation using Storybook.
+
+Start the local development server on <http://localhost:6006>
+
+```bash
+pnpm run storybook
+```
+
+Locally build and preview production build:
+
+```bash
+# creates a complete bundle located at `./storybook-static`
+pnpm run build-storybook
+# starts local preview of it
+pnpm dlx http-server ./storybook-static
+```

@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       viteConfig.plugins?.push(
         vuetify({
           styles: { configFile: resolve('./settings.scss') },
+          autoImport: true,
         })
       )
     },
