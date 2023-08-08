@@ -1,4 +1,7 @@
 {
+  "name": "@drik98/motor-sport-calendar",
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.1.0",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -15,7 +18,8 @@
     "lintfix:style": "stylelint --fix \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lintfix:prettier": "prettier --write --list-different --ignore-path .gitignore .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic"
   },
   "devDependencies": {
     "@googleapis/sheets": "^4.0.2",
@@ -32,6 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "@vue/eslint-config-typescript": "^11.0.2",
+    "chromatic": "^6.21.0",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
