@@ -1,6 +1,7 @@
 # Motorsport Calendar 2.0
 
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://dev--64d28e804eaa6986b47fc844.chromatic.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d09b270a-11da-4b40-8e49-6a19e56c10d3/deploy-status)](https://motorsport-calendar-nuxt-3.netlify.app/)
 
 This web application is the successor of [motorsport-calendar-vue](https://github.com/drik98/motorsport-calendar-vue).
 Even though Gridsome was a practical tool at the time of creation it failed to migrate to vue 3 as well as it
