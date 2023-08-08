@@ -54,6 +54,10 @@ export default defineNuxtConfig({
     columnTime: 'Zeit',
     columnFormatDate: 'DD.MM.YYYY hh:mm',
     defaultRaceDuration: 'PT2H',
+    public: {
+      defaultFromDateDuration: 'P0D',
+      defaultToDateDuration: 'P1W',
+    },
   },
   vite: {
     ssr: {
