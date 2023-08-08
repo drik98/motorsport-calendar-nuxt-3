@@ -1,0 +1,23 @@
+# Setup using guide from https://storybook.js.org/docs/vue/sharing/publish-storybook 
+
+name: 'Chromatic Publish'
+
+on: push
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install dependencies
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
