@@ -17,23 +17,15 @@
       </VCol>
     </VRow>
   </VContainer>
-  <div class="hello-scss">
-    <ul class="list-disc">
-      <li v-for="race in filteredRaces" :key="race.name">
-        <strong>{{ race.name }}</strong>
-        <ul>
-          <li v-for="[key, entry] in Object.entries(race)" :key="key">
-            {{ key }}: {{ entry }}
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  <VContainer>
+    <RaceTimeline :races="filteredRaces"/>
+  </VContainer>
 </template>
 
 <script setup lang="ts">
 import moment from 'moment'
 import { Race } from '~/types/races'
+import RaceTimeline from '~/components/RaceTimeline.vue'
 
 const runtimeConfig = useRuntimeConfig()
 
