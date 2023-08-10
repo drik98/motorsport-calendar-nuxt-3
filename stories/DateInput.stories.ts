@@ -19,7 +19,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     label: 'Birthday',
-    modelValue: new Date(),
+    modelValue: new Date('2023-06-30'),
   },
 }
 
